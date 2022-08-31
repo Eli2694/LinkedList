@@ -1,0 +1,5 @@
+﻿  sortedLinkedList.c
+C:\Users\User\source\repos\LinkedList\LinkedList\sortedLinkedList.c(37,13): warning C4013: 'time' undefined; assuming extern returning int
+C:\Users\User\source\repos\LinkedList\LinkedList\sortedLinkedList.c(38,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\User\source\repos\LinkedList\LinkedList\sortedLinkedList.c(74,8): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  LinkedList.vcxproj -> C:\Users\User\source\repos\LinkedList\x64\Debug\LinkedList.exe
