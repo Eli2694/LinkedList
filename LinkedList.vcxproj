@@ -20,8 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClassExercise-homework.c" />
+    <ClCompile Include="linkedlistFirstTry.c" />
     <ClCompile Include="linked-explanation.c" />
-    <ClCompile Include="sortedLinkedList.c" />
+    <ClCompile Include="prepSortedLinkedList.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

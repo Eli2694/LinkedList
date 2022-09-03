@@ -27,7 +27,10 @@
     <ClCompile Include="linked-explanation.c">
       <Filter>Source Files\week3</Filter>
     </ClCompile>
-    <ClCompile Include="sortedLinkedList.c">
+    <ClCompile Include="prepSortedLinkedList.c">
+      <Filter>Source Files\week3\sortedLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedlistFirstTry.c">
       <Filter>Source Files\week3\sortedLinkedList</Filter>
     </ClCompile>
   </ItemGroup>

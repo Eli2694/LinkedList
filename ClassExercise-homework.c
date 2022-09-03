@@ -4,7 +4,6 @@
 #pragma warning(disable:4996)
 
 /*
-
 struct place
 {
 	int val;
@@ -58,7 +57,7 @@ void Targil1()
 	}
 
 	FILE* f = fopen("c:\\C-Class-Exercises\\linkedlist1-mavo.bin", "w");
-	fwrite(sample, sizeof(struct MyStruct), numStruct, f);
+	fwrite(&sample, sizeof(struct MyStruct), numStruct, f);
 	fclose(f);
 	free(sample);
 }
@@ -202,7 +201,7 @@ void freeMemoryAllocHead()
 
 
 
-int main_linklis()
+int main_linkedlistexercises()
 {
 
 	//Targil1();
@@ -237,8 +236,12 @@ void writeNewFile()
 		{
 			printf("Enter Number To Val.\nTo Stop Press 0\nNumber: ");
 			scanf("%d", &pencil.val);
+			if (pencil.val == 0)
+			{
+				fclose(fp);
+				return;
+			}
 			fwrite(&pencil.val, sizeof(struct place), 1, fp);
-
 		}
 
 		fclose(fp);
@@ -260,9 +263,16 @@ void save()
 		struct place* curr;
 		struct place* prev = NULL;
 		curr = (struct place*)malloc(sizeof(struct place));
+		int num;
 
-		while (fread(curr, sizeof(struct place), 1, fr))
+		while (num = fread(curr, sizeof(struct place), 1, fr))
 		{
+			if (num == 0)
+			{
+				fclose(fr);
+				return;
+			}
+
 			if (root == NULL)
 			{
 				root = curr;
@@ -285,7 +295,28 @@ void save()
 
 void Load()
 {
-
+	FILE* fw = fopen("c:\\C-Class-Exercises\\Load.bin", "w");
+	if (!fw)
+	{
+		printf("Error");
+		return;
+	}
+	else
+	{
+		struct place* print = root;
+		while (print != NULL)
+		{
+			if (print->next == NULL)
+			{
+				return;
+			}
+			
+			fwrite(&print->val, sizeof(struct place), 1, fw);
+			print = print->next;
+			
+		}
+	}
+	
 
 };
 
@@ -296,7 +327,8 @@ void freeMemoryAllocRoot() {
 	while (current != NULL)
 	{
 		release = current;
-		free(release);
 		current = current->next;
+		free(release);
 	}
-}*/
+}
+*/
